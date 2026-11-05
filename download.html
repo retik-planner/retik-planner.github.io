@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>دانلود ریتیک برای اندروید | Download Retik for Android</title>
+  <meta name="description" content="دانلود مستقیم فایل نصبی ریتیک، برنامه‌ریز روزانه و عادت‌ساز فارسی با تقویم شمسی، برای اندروید.">
+  <link rel="canonical" href="https://retik-planner.github.io/download.html">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    :root { --bg: #F7F6F2; --text: #2C2C2A; --muted: #6F6E69; --accent: #1D9E75; --on-accent: #FFFFFF; --card: #FFFFFF; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #16181A; --text: #E8E6DF; --muted: #9A988F; --accent: #5DCAA5; --on-accent: #10231C; --card: #212427; }
+    }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.8 Vazirmatn, Tahoma, system-ui, sans-serif; }
+    main { max-width: 560px; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { font-size: 24px; font-weight: 500; margin: 0 0 4px; }
+    h2 { font-size: 18px; font-weight: 500; margin: 24px 0 6px; color: var(--accent); }
+    p, li { margin: 6px 0; }
+    .muted { color: var(--muted); font-size: 14px; }
+    section { background: var(--card); border-radius: 16px; padding: 20px; margin-top: 20px; }
+    .logo { width: 72px; height: 72px; border-radius: 18px; display: block; margin-bottom: 12px; }
+    .btn { display: block; text-align: center; background: var(--accent); color: var(--on-accent); text-decoration: none;
+           font-weight: 500; font-size: 18px; border-radius: 14px; padding: 14px; margin: 18px 0 6px; }
+    [lang="en"] { direction: ltr; text-align: left; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+<main>
+  <section>
+    <img class="logo" src="icons/Icon-192.png" alt="">
+    <h1>ریتیک برای اندروید</h1>
+    <p>برنامه‌ریز روزانه و عادت‌ساز فارسی با تقویم شمسی. بدون اینترنت کار می‌کنه و اطلاعاتت فقط روی گوشی خودت می‌مونه.</p>
+    <a class="btn" href="retik.apk" download="Retik.apk">دانلود فایل نصبی</a>
+    <p class="muted" style="text-align:center">نسخه‌ی آزمایشی <span id="v">…</span> · حدود ۲۱ مگابایت</p>
+
+    <h2>نصب</h2>
+    <ol>
+      <li>فایل رو دانلود و بازش کن.</li>
+      <li>اگه گوشی پرسید، «نصب از این منبع» رو اجازه بده.</li>
+      <li>نسخه‌ی جدید رو روی قبلی نصب کن؛ اطلاعاتت می‌مونه.</li>
+    </ol>
+    <p class="muted">آیفون یا لپ‌تاپ داری؟ <a href="./">نسخه‌ی وب</a> رو توی مرورگر باز کن.</p>
+    <p class="muted">خبر نسخه‌های جدید: <a href="https://t.me/retikapp">@retikapp</a> · نظر و باگ: <a href="https://t.me/RetikAdminbot">@RetikAdminbot</a></p>
+  </section>
+
+  <section lang="en">
+    <h1>Retik for Android</h1>
+    <p>A daily planner and habit tracker. Works offline; your data stays on your phone.</p>
+    <a class="btn" href="retik.apk" download="Retik.apk">Download the APK</a>
+    <p class="muted">Install it over an older version to keep your data. On iPhone or a laptop, use the <a href="./">web version</a>.</p>
+  </section>
+</main>
+<script>
+  // version.json is written by every web build, and the APK is published with the same version.
+  fetch('version.json').then(function (r) { return r.json(); }).then(function (j) {
+    var fa = '۰۱۲۳۴۵۶۷۸۹';
+    document.getElementById('v').textContent = j.version.replace(/\d/g, function (d) { return fa[d]; });
+  }).catch(function () { document.getElementById('v').textContent = ''; });
+</script>
+</body>
+</html>
